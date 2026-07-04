@@ -4,12 +4,12 @@ import { scrollToSection } from "../utils/scrollToSection";
 import logo from "../assets/logo.png";
 
 const NAV_LINKS = [
-  { href: '/#home', label: 'Home' },
- { href: '/about-us', label: 'About Us' },
-  { href: '/#courses', label: 'Courses' },
-  { href: '/#services', label: 'Services' },
-  { href: '/#testimonials', label: 'Testimonials' },
-  { href: '/#contact', label: 'Contact' },
+  { href: '/#home', label: 'Home', sectionId: 'home' },
+  { href: '/about-us', label: 'About Us', sectionId: null },
+  { href: '/#courses', label: 'Courses', sectionId: 'courses' },
+  { href: '/#services', label: 'Services', sectionId: 'services' },
+  { href: '/#testimonials', label: 'Testimonials', sectionId: 'testimonials' },
+  { href: '/#contact', label: 'Contact', sectionId: 'contact' },
 ]
 
 export default function Header() {
@@ -18,21 +18,30 @@ export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleNavigation = (sectionId) => {
+  const handleSectionNavigation = (sectionId) => {
     setMenuOpen(false);
 
-    // Already on home page
     if (location.pathname === "/") {
       scrollToSection(sectionId);
       return;
     }
 
-    // Navigate home first
     navigate("/", {
       state: {
         scrollTo: sectionId,
       },
     });
+  };
+
+  const handleNavClick = (item) => {
+    setMenuOpen(false);
+
+    if (item.href.startsWith("/#")) {
+      handleSectionNavigation(item.sectionId);
+      return;
+    }
+
+    navigate(item.href);
   };
 
   return (
@@ -68,13 +77,22 @@ export default function Header() {
             }
           >
             {NAV_LINKS.map((item) => (
-              <li key={item.id}>
-                <button
-                  className="nav-link-btn"
-                  onClick={() => handleNavigation(item.id)}
-                >
-                  {item.label}
-                </button>
+              <li key={item.href}>
+                {item.href.startsWith('/#') ? (
+                  <button
+                    className="nav-link-btn"
+                    onClick={() => handleNavClick(item)}
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <button
+                    className="nav-link-btn"
+                    onClick={() => handleNavClick(item)}
+                  >
+                    {item.label}
+                  </button>
+                )}
               </li>
             ))}
           </ul>
@@ -99,7 +117,7 @@ export default function Header() {
 
           <button
             className="btn btn-primary"
-            onClick={() => handleNavigation("contact")}
+            onClick={() => handleSectionNavigation("contact")}
           >
             Enquire
           </button>
