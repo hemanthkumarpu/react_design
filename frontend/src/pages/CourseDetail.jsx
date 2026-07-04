@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { getCourseBySlug, getRelatedCourses } from '../data/courses.js'
+import { useEffect, useState } from 'react'
 
 function ClockIcon() {
   return (
@@ -111,6 +111,13 @@ function RelatedCourseCard({ course }) {
 
 export default function CourseDetail() {
   const { slug } = useParams()
+    useEffect(() => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant",
+  });
+}, [slug]);
   const course = getCourseBySlug(slug)
   const [openModule, setOpenModule] = useState(0)
   const [openFaq, setOpenFaq] = useState(0)

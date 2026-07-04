@@ -524,4 +524,15 @@ footer ul li a:hover{color:var(--amber);}
   .accordion-title{font-size:16px;}
   .accordion-hours{display:none;}
 }
+.nav-link-btn{
+    background:none;
+    border:none;
+    cursor:pointer;
+    font:inherit;
+    color:inherit;
+    padding:0;
+}
 
+.nav-link-btn:hover{
+    color:var(--amber);
+}

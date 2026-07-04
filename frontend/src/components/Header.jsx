@@ -1,27 +1,46 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import logo from '../assets/logo.png'
+import { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { scrollToSection } from "../utils/scrollToSection";
+import logo from "../assets/logo.png";
 
-// Hash-prefixed with "/" so these work as full navigations from any page
-// (e.g. a Course Detail page) as well as in-page scrolling on Home —
-// ScrollToHash handles the actual scrolling on route/hash change.
 const NAV_LINKS = [
-  { href: '/#home', label: 'Home' },
-  { href: '/#about', label: 'About' },
-  { href: '/#courses', label: 'Courses' },
-  { href: '/#services', label: 'Services' },
-  { href: '/#testimonials', label: 'Testimonials' },
-  { href: '/#contact', label: 'Contact' },
-]
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "courses", label: "Courses" },
+  { id: "services", label: "Services" },
+  { id: "testimonials", label: "Testimonials" },
+  { id: "contact", label: "Contact" },
+];
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (sectionId) => {
+    setMenuOpen(false);
+
+    // Already on home page
+    if (location.pathname === "/") {
+      scrollToSection(sectionId);
+      return;
+    }
+
+    // Navigate home first
+    navigate("/", {
+      state: {
+        scrollTo: sectionId,
+      },
+    });
+  };
 
   return (
     <header>
       <div className="header-flex">
         <Link to="/" className="brand">
           <img src={logo} alt="Gnana CompuTech Solutions logo" />
+
           <div className="brand-word">
             Gnana CompuTech
             <span>EDUCATION TECHNOLOGY SOLUTIONS</span>
@@ -34,25 +53,28 @@ export default function Header() {
             style={
               menuOpen
                 ? {
-                    display: 'flex',
-                    flexDirection: 'column',
-                    position: 'absolute',
-                    top: '100%',
+                    display: "flex",
+                    flexDirection: "column",
+                    position: "absolute",
+                    top: "100%",
                     left: 0,
                     right: 0,
-                    background: '#F7F3E8',
-                    padding: '20px 32px',
-                    borderBottom: '1px solid #DCD2B4',
-                    gap: '16px',
+                    background: "#F7F3E8",
+                    padding: "20px 32px",
+                    borderBottom: "1px solid #DCD2B4",
+                    gap: "16px",
                   }
                 : undefined
             }
           >
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <Link to={link.href} onClick={() => setMenuOpen(false)}>
-                  {link.label}
-                </Link>
+            {NAV_LINKS.map((item) => (
+              <li key={item.id}>
+                <button
+                  className="nav-link-btn"
+                  onClick={() => handleNavigation(item.id)}
+                >
+                  {item.label}
+                </button>
               </li>
             ))}
           </ul>
@@ -69,15 +91,23 @@ export default function Header() {
             >
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
-            <a href="tel:+919742543939">+91 97425 43939</a>
+
+            <a href="tel:+919742543939">
+              +91 97425 43939
+            </a>
           </div>
-          <Link to="/#contact" className="btn btn-primary">
+
+          <button
+            className="btn btn-primary"
+            onClick={() => handleNavigation("contact")}
+          >
             Enquire
-          </Link>
+          </button>
+
           <button
             className="nav-toggle"
             aria-label="Menu"
-            onClick={() => setMenuOpen((open) => !open)}
+            onClick={() => setMenuOpen(!menuOpen)}
           >
             <span></span>
             <span></span>
@@ -86,5 +116,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
