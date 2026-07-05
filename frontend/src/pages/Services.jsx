@@ -1,4 +1,5 @@
 import React from 'react'
+import './services.css'
 
 const SERVICES = [
   {
@@ -73,15 +74,22 @@ const SERVICES = [
 
 function ServiceCard({ service, reverse }) {
   return (
-    <article className={`service-item ${reverse ? 'reverse' : ''}`}>
-      <div className="service-card">
-        <div className="service-icon">{service.icon}</div>
-        <div className="service-copy">
-          <h3>{service.title}</h3>
-          <p>{service.desc}</p>
-          <ul>
+    <article className={`overflow-hidden rounded-[28px] border border-[#dcd2b4]/80 bg-white p-8 shadow-[0_20px_45px_rgba(16,35,61,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_55px_rgba(16,35,61,0.12)] ${reverse ? 'lg:flex-row-reverse' : ''}`}>
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-10">
+        <div className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#e4eeea] text-[#16705f] ${reverse ? 'lg:ml-auto' : ''}`}>
+          <div className="h-7 w-7 [&>svg]:h-full [&>svg]:w-full [&>svg]:stroke-current [&>svg]:fill-none [&>svg]:stroke-[1.4]">
+            {service.icon}
+          </div>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-[1.2rem] font-semibold text-[#10233d] sm:text-[1.35rem]">{service.title}</h3>
+          <p className="mt-3 text-[0.95rem] leading-7 text-[#3b4250]">{service.desc}</p>
+          <ul className="mt-5 space-y-3">
             {service.points.map((point) => (
-              <li key={point}>{point}</li>
+              <li key={point} className="flex items-start gap-3 text-sm text-[#10233d]">
+                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#d9a441]" />
+                <span>{point}</span>
+              </li>
             ))}
           </ul>
         </div>
@@ -92,15 +100,15 @@ function ServiceCard({ service, reverse }) {
 
 export default function Services() {
   return (
-    <main className="page services-page">
-      <section className="page-head">
-        <div className="wrap">
-          <div className="section-head">
-            <div className="eyebrow">
-              <span className="num">Page</span> SERVICES
-            </div>
-            <h1>Institution-ready technology services for learning organizations</h1>
-            <p>
+    <main className="min-h-screen bg-[#f7f3e8] text-[#3b4250]">
+      <section className="border-b border-[#dcd2b4]/80 bg-[radial-gradient(circle_at_88%_12%,_#eadfc0_0%,_transparent_55%)] px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-3xl">
+            
+            <h1 className="text-4xl font-semibold leading-tight text-[#10233d] sm:text-5xl lg:text-6xl">
+              Institution-ready technology services for learning organizations
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#3b4250]">
               Our full-services page gives a dedicated overview of the systems,
               platforms and training programs we build for schools, colleges and
               education teams.
@@ -109,8 +117,8 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="services-list">
-        <div className="wrap">
+      <section className="px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl space-y-8">
           {SERVICES.map((service, index) => (
             <ServiceCard
               key={service.title}

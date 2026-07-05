@@ -7,7 +7,7 @@ const NAV_LINKS = [
   { href: '/#home', label: 'Home', sectionId: 'home' },
   { href: '/about-us', label: 'About Us', sectionId: null },
   { href: '/#courses', label: 'Courses', sectionId: 'courses' },
-  { href: '/#services', label: 'Services', sectionId: 'services' },
+  { href: '/services', label: 'Services', sectionId: null },
   { href: '/#testimonials', label: 'Testimonials', sectionId: 'testimonials' },
   { href: '/#contact', label: 'Contact', sectionId: 'contact' },
 ]
