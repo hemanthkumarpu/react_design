@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const SERVICES = [
   {
     title: 'Smart School & College ERP',
@@ -75,11 +77,9 @@ function ServiceCard({ service }) {
       <div className="service-icon">{service.icon}</div>
       <h3>{service.title}</h3>
       <p>{service.desc}</p>
-      <ul>
-        {service.points.map((point) => (
-          <li key={point}>{point}</li>
-        ))}
-      </ul>
+      <Link to="/services" className="btn btn-amber service-link">
+        Explore More
+      </Link>
     </div>
   )
 }

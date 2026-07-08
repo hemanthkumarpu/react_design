@@ -289,8 +289,8 @@ section.alt{background:var(--paper-dim); border-top:1px solid var(--line); borde
   display:flex; justify-content:space-between; align-items:center;
   padding:20px 22px 22px; margin-top:12px;
 }
-.course-actions .view{font-size:13.5px; font-weight:600; color:var(--ink); border-bottom:1.5px solid var(--amber); padding-bottom:2px;}
-.course-actions .brochure{font-size:12.5px; color:var(--teal); font-family:var(--mono);}
+.view{font-size:13.5px; font-weight:600; color:var(--ink); border-bottom:1.5px solid var(--amber); padding-bottom:2px; text-decoration:none; display:inline-block;}
+.view:hover{color:var(--teal); border-color:var(--teal);}.course-actions .brochure{font-size:12.5px; color:var(--teal); font-family:var(--mono);}
 
 /* ---------- SERVICES ---------- */
 .service-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
@@ -299,8 +299,7 @@ section.alt{background:var(--paper-dim); border-top:1px solid var(--line); borde
 .service-icon svg{width:100%; height:100%; stroke:var(--teal); fill:none; stroke-width:1.4;}
 .service-card h3{font-size:17px; margin-bottom:10px; line-height:1.3;}
 .service-card p{font-size:14px; color:var(--slate); margin-bottom:14px;}
-.service-card ul li{font-size:13px; color:var(--ink); padding:5px 0 5px 16px; position:relative;}
-.service-card ul li::before{content:"—"; position:absolute; left:0; color:var(--amber-dark);}
+.service-link{margin-top:8px; width:fit-content; box-shadow:0 8px 20px rgba(236, 172, 60, 0.16);}
 
 /* ---------- TESTIMONIALS ---------- */
 .testimonial-band{
@@ -382,10 +381,23 @@ footer ul li a:hover{color:var(--amber);}
 @media (max-width:760px){
   .nav-menu, .phone-chip{display:none;}
   .nav-toggle{display:block;}
+  .nav-menu[style*="display: flex"] {
+    width: 50% !important;
+    right: 0 !important;
+    left: auto !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
   .ledger-row{flex-wrap:wrap; gap:16px;}
   .ledger-stat{flex:0 0 40%; border-right:none; padding-right:0;}
   .course-grid, .service-grid{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr;}
+  footer{padding:40px 0 20px;}
+  .footer-brand span{font-size:16px;}
+  .footer-tag{font-size:12px;}
+  footer h4{font-size:10px; margin-bottom:12px;}
+  footer ul li{padding:4px 0; font-size:13px;}
+  .footer-bottom{padding-top:16px; font-size:11px;}
   section{padding:64px 0;}
   .hero{padding:56px 0 44px;}
 }

@@ -92,6 +92,9 @@ function ServiceCard({ service, reverse }) {
               </li>
             ))}
           </ul>
+          <a href="/services" className="view mt-6">
+            Explore now →
+          </a>
         </div>
       </div>
     </article>
