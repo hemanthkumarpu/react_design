@@ -1,4 +1,4 @@
-import aboutTeamPhoto from '../assets/about-team.jpg'
+
 
 const VALUES = [
   {
@@ -95,34 +95,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="about-bottom">
-          <div className="about-photo-wrap">
-            <div className="about-photo">
-              <img
-                src={aboutTeamPhoto}
-                alt="Gnana CompuTech team at an institutional felicitation event"
-              />
-            </div>
-            <div className="photo-caption">
-              FIELD NOTE — Institutional partner engagement, Bengaluru
-            </div>
-          </div>
-
-          <div className="about-value-stack">
-            <div className="about-value-title">Values that guide us</div>
-            <ul className="values-list">
-              {VALUES.map((value) => (
-                <li key={value.tick}>
-                  <span className="tick">{value.tick}</span>
-                  <div>
-                    <strong>{value.title}</strong>
-                    <span>{value.text}</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+       
       </div>
     </section>
   )

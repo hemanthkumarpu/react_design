@@ -1,4 +1,4 @@
-import testimonialPhoto from '../assets/testimonial-photo.jpg'
+
 
 const TESTIMONIALS = [
   {
@@ -27,23 +27,16 @@ export default function Testimonials() {
         </div>
 
         <div className="testimonial-band">
-          <div className="testimonial-photo">
-            <img
-              src={testimonialPhoto}
-              alt="Certificate presentation at a Gnana CompuTech partner institution"
-            />
-            <div className="label">Partner institution, felicitation ceremony</div>
-          </div>
-          <div className="testimonial-cards">
-            {TESTIMONIALS.map((t) => (
-              <div className="testimonial-card" key={t.author}>
-                <span className="quote-mark">&rdquo;</span>
-                <p className="testimonial-text">{t.text}</p>
-                <div className="testimonial-author">{t.author}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+  <div className="testimonial-cards full-width">
+    {TESTIMONIALS.map((t) => (
+      <div className="testimonial-card" key={t.author}>
+        <span className="quote-mark">&rdquo;</span>
+        <p className="testimonial-text">{t.text}</p>
+        <div className="testimonial-author">{t.author}</div>
+      </div>
+    ))}
+  </div>
+</div>
       </div>
     </section>
   )
