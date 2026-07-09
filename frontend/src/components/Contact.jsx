@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "../firebase"; // Change this path if needed
+import { db } from "../firebase";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -10,8 +10,11 @@ export default function Contact() {
     message: "",
   });
 
+  const [success, setSuccess] = useState(false);
+
   function handleChange(e) {
     const { name, value } = e.target;
+
     setForm((prev) => ({
       ...prev,
       [name]: value,
@@ -31,7 +34,11 @@ export default function Contact() {
         createdAt: serverTimestamp(),
       });
 
-      alert("Enquiry Submitted Successfully!");
+      setSuccess(true);
+
+      setTimeout(() => {
+        setSuccess(false);
+      }, 5000);
 
       setForm({
         name: "",
@@ -40,11 +47,9 @@ export default function Contact() {
         message: "",
       });
     } catch (error) {
-      console.error("Error saving enquiry:", error);
-      alert("Something went wrong. Please try again.");
+      console.error(error);
     }
   }
-
   return (
     <section id="contact">
       <div className="wrap">
@@ -139,6 +144,23 @@ export default function Contact() {
 
           <div className="contact-form">
             <div className="eyebrow">SEND AN ENQUIRY</div>
+          {success && (
+  <div className="success-message">
+    <div className="success-icon">
+      ✓
+    </div>
+
+    <div className="success-content">
+      <h4>Enquiry Submitted Successfully</h4>
+
+      <p>
+        Thank you for contacting Gnana CompuTech Solutions.
+        We have received your enquiry and our team will
+        get back to you within one working day.
+      </p>
+    </div>
+  </div>
+)}
 
             <form onSubmit={handleSubmit}>
               <div className="field">

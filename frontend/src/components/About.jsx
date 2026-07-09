@@ -75,6 +75,52 @@ export default function About() {
           </div>
         </div>
 
+      <div className="recognition-panel">
+    
+
+  <h3>Registered & Recognized</h3>
+
+  <p>
+    Gnana CompuTech Solutions is a registered enterprise committed to
+    delivering trusted education technology services while complying with
+    Government of India standards and regulatory requirements.
+  </p>
+
+  <div className="recognition-grid">
+    <div className="recognition-card">
+      <img
+        src="./frontend/src/assets/msme.jpg"
+        alt="MSME Registered"
+      />
+
+      <div>
+        <h4>MSME Registered</h4>
+
+        <span>
+          Registered under the Ministry of Micro, Small &
+          Medium Enterprises, Government of India.
+        </span>
+      </div>
+    </div>
+
+    <div className="recognition-card">
+      <img
+        src="./frontend/src/assets/mca.webp"
+        alt="Ministry of Corporate Affairs"
+      />
+
+      <div>
+        <h4>Ministry of Corporate Affairs</h4>
+
+        <span>
+          Incorporated and recognized under the Ministry
+          of Corporate Affairs, Government of India.
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
         <div className="mv-grid">
           <div className="ledger-card">
             <h3>Our mission</h3>
