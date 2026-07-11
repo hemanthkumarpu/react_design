@@ -1,4 +1,6 @@
 import aboutTeamPhoto from '../assets/about-team.jpg'
+import msmeImg from "../assets/msme.jpg";
+import mcaImg from "../assets/mca.webp";
 
 const VALUES = [
   {
@@ -89,7 +91,7 @@ export default function About() {
   <div className="recognition-grid">
     <div className="recognition-card">
       <img
-        src="./frontend/src/assets/msme.jpg"
+        src={msmeImg}
         alt="MSME Registered"
       />
 
@@ -105,7 +107,7 @@ export default function About() {
 
     <div className="recognition-card">
       <img
-        src="./frontend/src/assets/mca.webp"
+        src={mcaImg}
         alt="Ministry of Corporate Affairs"
       />
 

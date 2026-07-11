@@ -7,7 +7,7 @@ import Home from './pages/Home.jsx'
 import AboutUs from './pages/AboutUs.jsx'
 import CourseDetail from './pages/CourseDetail.jsx'
 import Services from './pages/Services.jsx'
-import AdminLogin from './pages/AdminLogin.jsx'
+import AdminLogin from './components/AdminLogin.jsx'
 import logo from './assets/logo.png'
 
 export default function App() {
