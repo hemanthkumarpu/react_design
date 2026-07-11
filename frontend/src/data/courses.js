@@ -15,11 +15,11 @@ export const COURSES = [
     fee: '₹34,900',
     desc: 'Network fundamentals through to threat detection, security auditing and incident response.',
     summary:
-      'A ground-up path through networking and defensive security: you\u2019ll wire up real network topologies, then learn to break and defend them — covering firewalls, SIEM tooling, vulnerability scanning and incident response, mapped to the skills employers screen for in SOC and network-admin roles.',
+      'A ground up path through networking and defensive security: you\u2019ll wire up real network topologies, then learn to break and defend them — covering firewalls, SIEM tooling, vulnerability scanning and incident response, mapped to the skills employers screen for in SOC and network-admin roles.',
     outcomes: [
-      'Design and troubleshoot LAN/WAN topologies using industry-standard tools',
+      'Design and troubleshoot LAN/WAN topologies using industry standard tools',
       'Configure firewalls, VPNs and intrusion detection/prevention systems',
-      'Run vulnerability scans and interpret CVSS-scored findings',
+      'Run vulnerability scans and interpret CVSS scored findings',
       'Perform basic security audits against a compliance checklist',
       'Investigate and document a simulated security incident end to end',
       'Speak confidently to CompTIA Network+ and Security+ exam objectives',
@@ -31,7 +31,7 @@ export const COURSES = [
         topics: [
           'OSI & TCP/IP models, subnetting, routing and switching',
           'DNS, DHCP, NAT and VLAN configuration',
-          'Hands-on labs on Cisco Packet Tracer / GNS3',
+          'Hands on labs on Cisco Packet Tracer / GNS3',
         ],
       },
       {
@@ -57,7 +57,7 @@ export const COURSES = [
         hours: '90 hrs',
         topics: [
           'Vulnerability scanning with Nessus / OpenVAS',
-          'Packet analysis with Wireshark; basic pen-testing with Kali',
+          'Packet analysis with Wireshark; basic pen testing with Kali',
           'SIEM fundamentals and log correlation (Splunk/ELK)',
         ],
       },
@@ -67,14 +67,14 @@ export const COURSES = [
         topics: [
           'Incident response lifecycle and playbooks',
           'Security audit checklist against a compliance framework',
-          'Reporting findings to technical and non-technical stakeholders',
+          'Reporting findings to technical and non technical stakeholders',
         ],
       },
       {
         title: 'Module 6 — Capstone Project',
         hours: '40 hrs',
         topics: [
-          'Secure a deliberately-vulnerable network end to end',
+          'Secure a deliberately vulnerable network end to end',
           'Present a full audit report and remediation plan to a mentor panel',
         ],
       },
@@ -119,9 +119,9 @@ export const COURSES = [
       'Administer and harden Linux servers (Ubuntu/CentOS) in production configurations',
       'Provision, network and secure virtual machines on AWS and Azure',
       'Containerize applications with Docker and orchestrate with Kubernetes basics',
-      'Automate provisioning with shell scripting and infrastructure-as-code',
-      'Set up monitoring, backups and disaster-recovery basics',
-      'Estimate and optimise cloud costs for a small-to-mid deployment',
+      'Automate provisioning with shell scripting and infrastructure as code',
+      'Set up monitoring, backups and disaster recovery basics',
+      'Estimate and optimise cloud costs for a small to mid deployment',
     ],
     curriculum: [
       {
@@ -155,7 +155,7 @@ export const COURSES = [
         hours: '60 hrs',
         topics: [
           'Azure VMs, Resource Groups, Storage and networking',
-          'Azure AD basics and role-based access control',
+          'Azure AD basics and role based access control',
         ],
       },
       {
@@ -177,7 +177,7 @@ export const COURSES = [
       },
     ],
     prerequisites: [
-      'Basic command-line comfort (any OS)',
+      'Basic command line comfort (any OS)',
       'Elementary understanding of how the internet/web apps work',
       'A laptop with at least 8GB RAM for local VM/container work',
     ],
@@ -186,12 +186,12 @@ export const COURSES = [
       'Design, provision and deploy a resilient multi-tier web application split across AWS and Azure, with monitoring and an automated deployment pipeline.',
     faqs: [
       {
-        q: 'Will I get free-tier cloud credits to practice with?',
-        a: 'We help you set up AWS and Azure free-tier accounts and structure labs to stay within free-tier limits wherever possible.',
+        q: 'Will I get free tier cloud credits to practice with?',
+        a: 'We help you set up AWS and Azure free tier accounts and structure labs to stay within free tier limits wherever possible.',
       },
       {
-        q: 'Is this course vendor-neutral or AWS/Azure-specific?',
-        a: 'It\u2019s intentionally dual-cloud, so you leave able to reason about infrastructure choices rather than being locked to one vendor\u2019s console.',
+        q: 'Is this course vendor neutral or AWS/Azure specific?',
+        a: 'It\u2019s intentionally dual cloud, so you leave able to reason about infrastructure choices rather than being locked to one vendor\u2019s console.',
       },
     ],
   },
@@ -205,16 +205,16 @@ export const COURSES = [
     nextBatch: '11 Aug 2026',
     seats: '20 seats / cohort',
     fee: '₹39,900',
-    desc: 'Java, Spring Boot and React — from data modelling to a deployed, portfolio-ready application.',
+    desc: 'Java, Spring Boot and React — from data modelling to a deployed, portfolio ready application.',
     summary:
-      'Core Java through to a deployed, full-stack product: object-oriented fundamentals, Spring Boot APIs, React front ends, and the database and Git workflows that hold it all together — finishing with a portfolio application you actually built, not cloned.',
+      'Core Java through to a deployed, full stack product: object oriented fundamentals, Spring Boot APIs, React front ends, and the database and Git workflows that hold it all together — finishing with a portfolio application you actually built, not cloned.',
     outcomes: [
-      'Write clean, object-oriented Java and reason about data structures used in interviews',
+      'Write clean, object oriented Java and reason about data structures used in interviews',
       'Design relational schemas and query them confidently with SQL',
       'Build and secure REST APIs with Spring Boot and Spring Security',
       'Build responsive front ends in React, consuming your own APIs',
       'Use Git/GitHub in a team workflow, including code review',
-      'Deploy a full-stack application to a live server',
+      'Deploy a full stack application to a live server',
     ],
     curriculum: [
       {
@@ -255,26 +255,26 @@ export const COURSES = [
         topics: [
           'Git branching workflows and code review practice',
           'Unit testing with JUnit; basic React testing',
-          'Deploying to a cloud VM / platform-as-a-service',
+          'Deploying to a cloud VM / platform as a service',
         ],
       },
       {
         title: 'Module 6 — Capstone Project',
         hours: '50 hrs',
         topics: [
-          'Build a full-stack application end to end, solo or in a pair',
+          'Build a full stack application end to end, solo or in a pair',
           'Present and defend architecture choices to a mentor panel',
         ],
       },
     ],
     prerequisites: [
       'No prior coding experience required for the standard track',
-      'Logical/problem-solving aptitude is assessed at enrolment',
+      'Logical/problem solving aptitude is assessed at enrolment',
       'A laptop capable of running an IDE and a local database',
     ],
     tools: ['Java', 'Spring Boot', 'React', 'MySQL/PostgreSQL', 'Git & GitHub', 'Postman'],
     project:
-      'Design, build and deploy a complete full-stack application — your own choice of domain — with a Spring Boot API, React front end and a real database behind it.',
+      'Design, build and deploy a complete full stack application — your own choice of domain — with a Spring Boot API, React front end and a real database behind it.',
     faqs: [
       {
         q: 'Is this suitable for a complete beginner?',
@@ -304,12 +304,12 @@ export const COURSES = [
     summary:
       'The analyst toolkit, taught against real, messy datasets instead of tidy sample files: Excel for fast exploration, SQL for pulling and shaping data at source, and Power BI for dashboards that a manager will actually open twice.',
     outcomes: [
-      'Clean and structure messy, real-world datasets confidently in Excel',
+      'Clean and structure messy, real world datasets confidently in Excel',
       'Write SQL queries — joins, aggregations, window functions — to answer business questions',
       'Model data and build relationships in Power BI',
       'Design dashboards and reports that communicate a clear finding, not just data',
       'Write basic DAX measures for custom calculations',
-      'Present analysis and recommendations to a non-technical audience',
+      'Present analysis and recommendations to a non technical audience',
     ],
     curriculum: [
       {
@@ -330,7 +330,7 @@ export const COURSES = [
       {
         title: 'Module 4 — DAX & Advanced Dashboards',
         hours: '60 hrs',
-        topics: ['DAX measures, calculated columns', 'Row-level security and dashboard publishing'],
+        topics: ['DAX measures, calculated columns', 'Row level security and dashboard publishing'],
       },
       {
         title: 'Module 5 — Capstone Project',
@@ -348,11 +348,11 @@ export const COURSES = [
     ],
     tools: ['Microsoft Excel', 'SQL Server / MySQL', 'Power BI Desktop', 'Power Query', 'DAX'],
     project:
-      'Turn a real, unclean dataset into a published Power BI dashboard, with SQL used to pull and pre-aggregate the underlying data.',
+      'Turn a real, unclean dataset into a published Power BI dashboard, with SQL used to pull and pre aggregate the underlying data.',
     faqs: [
       {
         q: 'Do I need to know SQL before joining?',
-        a: 'No — SQL is taught from first principles in Module 2, building on the data-cleaning habits from Module 1.',
+        a: 'No — SQL is taught from first principles in Module 2, building on the data leaning habits from Module 1.',
       },
       {
         q: 'Is Power BI Desktop free to use for coursework?',
@@ -372,7 +372,7 @@ export const COURSES = [
     fee: '₹37,900',
     desc: 'Python, core ML models and applied projects across classification and prediction tasks.',
     summary:
-      'A practical route into machine learning: Python and the numeric-computing stack, the core supervised and unsupervised algorithms, and applied projects across classification and prediction — enough theory to know why a model works, and enough practice to ship one.',
+      'A practical route into machine learning: Python and the numeric computing stack, the core supervised and unsupervised algorithms, and applied projects across classification and prediction — enough theory to know why a model works, and enough practice to ship one.',
     outcomes: [
       'Write Python confidently with NumPy, pandas and matplotlib',
       'Explain and apply core ML algorithms: regression, classification, clustering',
@@ -431,11 +431,11 @@ export const COURSES = [
     faqs: [
       {
         q: 'How much math do I actually need going in?',
-        a: 'Comfort with high-school algebra is enough to start; Module 2 covers the statistics and linear algebra you\u2019ll actually use.',
+        a: 'Comfort with high school algebra is enough to start; Module 2 covers the statistics and linear algebra you\u2019ll actually use.',
       },
       {
         q: 'Does this cover generative AI / LLMs?',
-        a: 'The core curriculum focuses on classical ML and an introduction to deep learning; generative AI is covered as an elective add-on session, not the main syllabus.',
+        a: 'The core curriculum focuses on classical ML and an introduction to deep learning; generative AI is covered as an elective add on session, not the main syllabus.',
       },
     ],
   },
@@ -480,7 +480,7 @@ export const COURSES = [
         title: 'Module 4 — Applied Mini Projects',
         hours: '50 hrs',
         topics: [
-          'Command-line tools and small automation scripts',
+          'Command line tools and small automation scripts',
           'An intro to a library of your choice (data, web, or automation)',
         ],
       },
@@ -497,7 +497,7 @@ export const COURSES = [
     ],
     tools: ['Python 3', 'VS Code', 'Git & GitHub'],
     project:
-      'Design and build a complete small application — a CLI tool, simple automation script, or data-driven mini project — from a blank file to a working demo.',
+      'Design and build a complete small application — a CLI tool, simple automation script, or data driven mini project — from a blank file to a working demo.',
     faqs: [
       {
         q: 'Is this the right starting point before Java Full Stack or AI/ML?',
@@ -505,7 +505,7 @@ export const COURSES = [
       },
       {
         q: 'What if I\u2019ve coded a little before, in any language?',
-        a: 'You\u2019re welcome to join; the pace is set for true beginners, so prior exposure just means the first two weeks feel like a warm-up.',
+        a: 'You\u2019re welcome to join; the pace is set for true beginners, so prior exposure just means the first two weeks feel like a warmup.',
       },
     ],
   },

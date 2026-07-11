@@ -55,7 +55,7 @@ export default function Courses() {
           <div className="eyebrow">
             <span className="num">Ch. 02</span> COURSES &amp; INTERNSHIPS
           </div>
-          <h2>Certified, project-led, industry-mapped.</h2>
+          <h2>Certified, project led, industry mapped.</h2>
           <p>
             Every track pairs structured coursework with a real, mentored
             project — so a certificate means the same thing to us that it

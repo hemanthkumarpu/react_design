@@ -59,7 +59,7 @@ export default function Contact() {
           </div>
           <h2>Tell us what you're building.</h2>
           <p>
-            Whether it's an ERP for your campus or a placement-ready
+            Whether it's an ERP for your campus or a placement ready
             internship track for your students — write in, and we'll respond
             within one working day.
           </p>

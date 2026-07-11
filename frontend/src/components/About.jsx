@@ -36,8 +36,8 @@ export default function About() {
           <h2>Knowledge is the tool. Technology is the lever.</h2>
           <p>
             <strong>Gnana CompuTech Solutions Pvt. Ltd.</strong> is a
-            Bengaluru-based education technology company built on one idea:{' '}
-            <em>gnana</em> — knowledge — is the most powerful tool for
+            Bengaluru based education technology company built on one idea:{' '}
+            <em>gnana</em> knowledge is the most powerful tool for
             transformation. We work at the seam between traditional
             classrooms and the digital, skill-oriented world students are
             actually walking into.
@@ -50,7 +50,7 @@ export default function About() {
             <p>
               A team of educators, engineers and digital-learning
               specialists. We don't outsource the teaching to the
-              technology — we build tools that make good teaching scale,
+              technology we build tools that make good teaching scale,
               backed by real classroom experience on the other side of the
               screen.
             </p>
@@ -65,13 +65,13 @@ export default function About() {
                 <strong>Exam &amp; IQ Platforms</strong> — Gamified testing with live analytics
               </li>
               <li>
-                <strong>Internships &amp; Projects</strong> — Certified, industry-mapped programs
+                <strong>Internships &amp; Projects</strong> — Certified, industry mapped programs
               </li>
               <li>
                 <strong>Teacher Training</strong> — Modern pedagogy and ed-tech fluency
               </li>
               <li>
-                <strong>Custom Software</strong> — Tailor-made academic tools, built to fit
+                <strong>Custom Software</strong> — Tailor made academic tools, built to fit
               </li>
             </ul>
           </div>
@@ -137,7 +137,7 @@ export default function About() {
             <p>
               To be a national reference point for ed-tech done well:
               training, platforms and transformation that make every
-              student and institution genuinely future-ready.
+              student and institution genuinely future ready.
             </p>
           </div>
         </div>

@@ -16,7 +16,7 @@ export default function Hero() {
           <p className="hero-lede">
             We build the software, training and systems that carry Indian
             institutions from the chalkboard to the cloud — ERPs, exam
-            platforms, teacher training and industry-ready internships,
+            platforms, teacher training and industry ready internships,
             engineered by educators who code.
           </p>
           <div className="hero-ctas">

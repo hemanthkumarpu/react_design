@@ -34,7 +34,7 @@ export default function AboutUs() {
             </div>
             <h2>We create learning systems that feel practical, scalable, and deeply human.</h2>
             <p>
-              <strong>Gnana CompuTech Solutions Pvt. Ltd.</strong> is a Bengaluru-based education technology company built on the belief that knowledge should travel farther, faster, and more clearly through every learning experience.
+              <strong>Gnana CompuTech Solutions Pvt. Ltd.</strong> is a Bengaluru based education technology company built on the belief that knowledge should travel farther, faster, and more clearly through every learning experience.
             </p>
             <div className="about-hero-actions">
               <a href="/#courses" className="btn btn-primary">
@@ -51,8 +51,8 @@ export default function AboutUs() {
             <h3>From classrooms to career pathways, we build tools that support growth at every stage.</h3>
             <ul>
               <li>Smart ERP platforms for schools and colleges</li>
-              <li>Assessment systems with real-time insight</li>
-              <li>Hands-on internships and project-based learning</li>
+              <li>Assessment systems with real time insight</li>
+              <li>Hands on internships and project based learning</li>
             </ul>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function AboutUs() {
           <div className="ledger-card">
             <h3>Our vision</h3>
             <p>
-              To become a trusted reference point for education technology that is thoughtful, effective, and future-ready.
+              To become a trusted reference point for education technology that is thoughtful, effective, and future ready.
             </p>
           </div>
           <div className="ledger-card">
