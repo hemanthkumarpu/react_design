@@ -52,7 +52,7 @@ export default function Header() {
 
           <div className="brand-word">
             Gnana CompuTech
-            <span>EDUCATION TECHNOLOGY SOLUTIONS</span>
+            <span>Solutions PVT LTD</span>
           </div>
         </Link>
 
