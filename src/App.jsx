@@ -11,6 +11,8 @@ import AboutUs from "./pages/AboutUs.jsx";
 import Services from "./pages/Services.jsx";
 import CourseDetail from "./pages/CourseDetail.jsx";
 import AdminLogin from "./components/AdminLogin.jsx";
+import AdminDashboard from "./components/Dashboard.jsx";
+import AdminGuard from "./utils/Adminguard.jsx";
 
 import logo from "./assets/logo.png";
 
@@ -19,9 +21,9 @@ export default function App() {
   const isAdminRoute = location.pathname.startsWith("/admin");
 
   useEffect(() => {
-    
+
     // Set page title
-    document.title = "Gnana CompuTech";
+    document.title = "Gnana CompuTech Solutions";
 
     // Set favicon
     let favicon = document.querySelector("link[rel='icon']");
@@ -91,7 +93,15 @@ export default function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
         <Route path="/courses/:slug" element={<CourseDetail />} />
-        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route
+          path="/admin/dashboard"
+          element={
+            <AdminGuard>
+              <AdminDashboard />
+            </AdminGuard>
+          }
+        />
         <Route path="*" element={<Home />} />
       </Routes>
 

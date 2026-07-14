@@ -1,6 +1,9 @@
+//GCS\src\firebase.js
+
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAnalytics, isSupported } from "firebase/analytics";
+import { getAuth } from "firebase/auth";  
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -20,6 +23,8 @@ export const db = getFirestore(app);
 
 // Analytics (optional)
 export let analytics = null;
+
+export const auth = getAuth(app);
 
 isSupported().then((supported) => {
   if (supported) {
